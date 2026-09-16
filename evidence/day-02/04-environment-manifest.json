@@ -1,0 +1,37 @@
+{
+  "manifestVersion": "1.0.0",
+  "generatedAt": "2026-09-12T15:50:00Z",
+  "project": {
+    "name": "SIMShield",
+    "slug": "simshield",
+    "domain": "Banking Cybersecurity / SIM-Swap Anomaly Detection",
+    "profile": "Resource-Constrained Local Profile"
+  },
+  "versions": {
+    "os": "Windows 10 Pro 64-bit (10.0.19045)",
+    "git": "2.47.1.windows.1",
+    "node": "v22.18.0",
+    "npm": "10.9.3",
+    "python": "3.13.0",
+    "pip": "24.2",
+    "fastapi": "0.141.1",
+    "uvicorn": "0.52.4",
+    "pydantic": "2.13.5",
+    "nestjsCommon": "10.4.0",
+    "nestjsCore": "10.4.0",
+    "dockerCli": "29.7.2",
+    "dockerCompose": "5.5.1"
+  },
+  "ports": {
+    "web": 3000,
+    "api": 3001,
+    "ai": 8000,
+    "mysql": 3307,
+    "weaviate": 8080
+  },
+  "secretHygiene": {
+    "liveSecretsTracked": false,
+    "envFileGitignored": true,
+    "sanitizedExamplePresent": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "simshield-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SIMShield Nuxt 3 Web Application & Fraud Analyst Dashboard",
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "nuxt": "^3.13.0",
+    "typescript": "^5.5.4"
+  }
+}

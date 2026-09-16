@@ -1,0 +1,131 @@
+version: "3.8"
+
+name: simshield
+
+services:
+  # ----------------------------------------------------------------------------
+  # 1. Nuxt 3 Web UI Shell (Port 3000)
+  # ----------------------------------------------------------------------------
+  web:
+    build:
+      context: ../apps/web
+      dockerfile: Dockerfile
+    container_name: simshield-web
+    restart: unless-stopped
+    ports:
+      - "${PORT_WEB:-3000}:3000"
+    environment:
+      - NODE_ENV=production
+      - NUXT_PUBLIC_API_BASE=http://localhost:${PORT_API:-3001}
+    depends_on:
+      api:
+        condition: service_started
+    networks:
+      - simshield_network
+
+  # ----------------------------------------------------------------------------
+  # 2. NestJS BFF & Orchestration API (Port 3001)
+  # ----------------------------------------------------------------------------
+  api:
+    build:
+      context: ../apps/api
+      dockerfile: Dockerfile
+    container_name: simshield-api
+    restart: unless-stopped
+    ports:
+      - "${PORT_API:-3001}:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT_API=3001
+      - DATABASE_URL=mysql://${MYSQL_USER:-simshield_user}:${MYSQL_PASSWORD:-simshield_password}@mysql:3306/${MYSQL_DATABASE:-simshield_db}
+      - AI_SERVICE_URL=http://ai:8000
+      - WEAVIATE_URL=http://weaviate:8080
+    depends_on:
+      mysql:
+        condition: service_healthy
+      weaviate:
+        condition: service_healthy
+      ai:
+        condition: service_started
+    networks:
+      - simshield_network
+
+  # ----------------------------------------------------------------------------
+  # 3. FastAPI AI Service Boundary (Port 8000)
+  # ----------------------------------------------------------------------------
+  ai:
+    build:
+      context: ../services/ai
+      dockerfile: Dockerfile
+    container_name: simshield-ai
+    restart: unless-stopped
+    ports:
+      - "${PORT_AI:-8000}:8000"
+    environment:
+      - AI_ENV=production
+      - PORT_AI=8000
+    networks:
+      - simshield_network
+
+  # ----------------------------------------------------------------------------
+  # 4. Relational Database: MySQL 8.0 (Port 3307:3306)
+  # ----------------------------------------------------------------------------
+  mysql:
+    image: mysql:8.0
+    container_name: simshield-mysql
+    restart: unless-stopped
+    ports:
+      - "${PORT_MYSQL:-3307}:3306"
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-simshield_db}
+      - MYSQL_USER=${MYSQL_USER:-simshield_user}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-simshield_password}
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD:-simshield_root_password}
+    volumes:
+      - simshield_mysql_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    networks:
+      - simshield_network
+
+  # ----------------------------------------------------------------------------
+  # 5. Vector Database: Weaviate (Port 8080)
+  # ----------------------------------------------------------------------------
+  weaviate:
+    image: semitechnologies/weaviate:1.25.4
+    container_name: simshield-weaviate
+    restart: unless-stopped
+    ports:
+      - "${PORT_WEAVIATE:-8080}:8080"
+    environment:
+      - QUERY_DEFAULTS_LIMIT=25
+      - AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate
+      - DEFAULT_VECTORIZER_MODULE=none
+      - CLUSTER_HOSTNAME=simshield-node-1
+    volumes:
+      - simshield_weaviate_data:/var/lib/weaviate
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:8080/v1/.well-known/ready || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - simshield_network
+
+networks:
+  simshield_network:
+    driver: bridge
+    name: simshield_network
+
+volumes:
+  simshield_mysql_data:
+    name: simshield_mysql_data
+  simshield_weaviate_data:
+    name: simshield_weaviate_data

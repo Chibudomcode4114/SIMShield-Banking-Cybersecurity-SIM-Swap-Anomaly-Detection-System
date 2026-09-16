@@ -1,0 +1,67 @@
+{
+  "manifestVersion": "1.0.0",
+  "generatedAt": "2026-09-12T15:45:00Z",
+  "project": {
+    "name": "SIMShield",
+    "slug": "simshield",
+    "domain": "Banking Cybersecurity / Fraud Detection",
+    "riskTier": "HIGH (Financial Cybersecurity)",
+    "dataPolicy": "SYNTHETIC / TEST DATA ONLY"
+  },
+  "hostEnvironment": {
+    "os": "Microsoft Windows 10 Pro (10.0.19045, 64-bit)",
+    "cpu": "Intel(R) Core(TM) i5-5300U CPU @ 2.30GHz (2 Cores, 4 Threads)",
+    "ramBytes": 8456019968,
+    "ramGb": 8.0,
+    "freeStorageBytes": 10187628544,
+    "freeStorageGb": 9.48,
+    "selectedProfile": "Resource-Constrained Local Profile (Demonstration Fallback for Virtualization Limitation)"
+  },
+  "tooling": {
+    "git": "2.47.1.windows.1",
+    "node": "v22.18.0",
+    "npm": "10.9.3",
+    "python": "3.13.0",
+    "pip": "24.2",
+    "dockerCli": "29.7.2",
+    "dockerCompose": "5.5.1"
+  },
+  "services": {
+    "web": {
+      "name": "simshield-web",
+      "framework": "Nuxt 3 / Vue 3",
+      "language": "TypeScript",
+      "hostPort": 3000,
+      "healthRoute": "/health"
+    },
+    "api": {
+      "name": "simshield-api",
+      "framework": "NestJS 10",
+      "language": "TypeScript",
+      "hostPort": 3001,
+      "healthRoute": "/health",
+      "dependencyRoute": "/health/dependencies"
+    },
+    "ai": {
+      "name": "simshield-ai",
+      "framework": "FastAPI 0.115.0",
+      "server": "Uvicorn 0.52.4",
+      "language": "Python 3.13",
+      "hostPort": 8000,
+      "healthRoute": "/health"
+    },
+    "mysql": {
+      "name": "simshield-mysql",
+      "version": "8.0",
+      "hostPort": 3307,
+      "internalPort": 3306,
+      "orm": "Prisma"
+    },
+    "weaviate": {
+      "name": "simshield-weaviate",
+      "version": "1.25.4",
+      "hostPort": 8080,
+      "healthRoute": "/v1/.well-known/ready"
+    }
+  }
+}

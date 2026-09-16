@@ -1,0 +1,24 @@
+{
+  "name": "simshield-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SIMShield - Risk-based banking cybersecurity & SIM-swap anomaly detection system",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "powershell -ExecutionPolicy Bypass -File ./scripts/start.ps1",
+    "stop": "powershell -ExecutionPolicy Bypass -File ./scripts/stop.ps1",
+    "health": "powershell -ExecutionPolicy Bypass -File ./scripts/health-check.ps1",
+    "fault-test": "powershell -ExecutionPolicy Bypass -File ./scripts/fault-injection.ps1"
+  },
+  "keywords": [
+    "cybersecurity",
+    "fraud-detection",
+    "sim-swap",
+    "banking",
+    "mvp"
+  ],
+  "author": "SIMShield Team",
+  "license": "UNLICENSED"
+}

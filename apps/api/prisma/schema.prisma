@@ -1,0 +1,86 @@
+// ==============================================================================
+// SIMShield Prisma Schema: Domain Model & Transactional Boundary
+// ==============================================================================
+// Managed strictly within the NestJS API / BFF Boundary
+// Domain: Banking Cybersecurity / SIM-Swap Anomaly Detection
+// ==============================================================================
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// 1. Bank Customer Account Boundary
+model BankAccount {
+  id                String             @id @default(uuid())
+  accountNumber     String             @unique @map("account_number")
+  customerPseudoId  String             @map("customer_pseudo_id")
+  phoneHash         String             @map("phone_hash")
+  kycTier           String             @default("TIER_3") @map("kyc_tier")
+  accountStatus     String             @default("ACTIVE") @map("account_status")
+  createdAt         DateTime           @default(now()) @map("created_at")
+  updatedAt         DateTime           @updatedAt @map("updated_at")
+
+  transactions      BankingTransaction[]
+  riskAssessments   RiskAssessment[]
+
+  @@map("bank_accounts")
+}
+
+// 2. Simulated Telecom SIM-Swap Events
+model SimSwapEvent {
+  id                String    @id @default(uuid())
+  phoneHash         String    @map("phone_hash")
+  imsiHash          String    @map("imsi_hash")
+  previousImsiHash  String?   @map("previous_imsi_hash")
+  telecomCarrier    String    @map("telecom_carrier")
+  swapTimestamp     DateTime  @map("swap_timestamp")
+  eventSource       String    @default("SIMULATED_TELCO_GATEWAY") @map("event_source")
+  processedAt       DateTime  @default(now()) @map("processed_at")
+
+  riskAssessments   RiskAssessment[]
+
+  @@map("sim_swap_events")
+}
+
+// 3. Banking Transactions Monitored for ATO
+model BankingTransaction {
+  id                     String      @id @default(uuid())
+  accountId              String      @map("account_id")
+  amountKobo             BigInt      @map("amount_kobo")
+  currency               String      @default("NGN")
+  transactionType        String      @map("transaction_type")
+  destinationAccount     String?     @map("destination_account")
+  deviceFingerprintHash  String?     @map("device_fingerprint_hash")
+  ipAddressMasked        String?     @map("ip_address_masked")
+  createdAt              DateTime    @default(now()) @map("created_at")
+
+  account                BankAccount @relation(fields: [accountId], references: [id])
+  riskAssessments        RiskAssessment[]
+
+  @@map("banking_transactions")
+}
+
+// 4. Risk Assessments & Fraud Analyst Audit Trail
+model RiskAssessment {
+  id                String              @id @default(uuid())
+  transactionId     String?             @map("transaction_id")
+  accountId         String              @map("account_id")
+  simSwapEventId    String?             @map("sim_swap_event_id")
+  riskScore         Int                 @map("risk_score")
+  riskTier          String              @map("risk_tier") // LOW, MEDIUM, HIGH, CRITICAL
+  decision          String              @map("decision")  // ALLOW, FLAG_FOR_REVIEW, REQUIRE_STEP_UP, HOLD_TRANSACTION
+  reasoningSummary  String              @map("reasoning_summary") @db.Text
+  assessedBy        String              @default("SIMSHIELD_RULES_ENGINE_V1") @map("assessed_by")
+  createdAt         DateTime            @default(now()) @map("created_at")
+
+  account           BankAccount         @relation(fields: [accountId], references: [id])
+  transaction       BankingTransaction? @relation(fields: [transactionId], references: [id])
+  simSwapEvent      SimSwapEvent?       @relation(fields: [simSwapEventId], references: [id])
+
+  @@map("risk_assessments")
+}
