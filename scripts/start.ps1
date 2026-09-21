@@ -21,7 +21,7 @@ function Test-PortListening([int]$Port) {
 }
 
 # Helper to wait for port
-function Wait-ForPort([int]$Port, [string]$ServiceName, [int]$TimeoutSec = 15) {
+function Wait-ForPort([int]$Port, [string]$ServiceName, [int]$TimeoutSec = 30) {
     Write-Host "Waiting for $ServiceName on port $Port..." -NoNewline
     $elapsed = 0
     while (-not (Test-PortListening -Port $Port) -and ($elapsed -lt $TimeoutSec)) {
