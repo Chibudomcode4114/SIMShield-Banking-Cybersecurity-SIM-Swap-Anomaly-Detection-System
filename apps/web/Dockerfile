@@ -1,4 +1,15 @@
-FROM node:22-alpine
+FROM node:22-alpine AS builder
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install --prefer-offline --no-audit
+
+COPY . .
+
+RUN npm run build
+
+FROM node:22-alpine AS runner
 
 WORKDIR /app
 
@@ -7,9 +18,11 @@ ENV PORT_WEB=3000 \
     NUXT_PUBLIC_API_BASE=http://localhost:3001
 
 COPY package*.json ./
-RUN npm install --only=production
+RUN npm install --omit=dev --prefer-offline --no-audit
 
-COPY . .
+COPY --from=builder /app/.nuxt ./.nuxt
+COPY --from=builder /app/.output ./.output
+COPY server.js ./
 
 EXPOSE 3000
 

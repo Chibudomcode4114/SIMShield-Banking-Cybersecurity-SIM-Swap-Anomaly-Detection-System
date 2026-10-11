@@ -1,4 +1,4 @@
-version: "3.8"
+
 
 name: simshield
 
@@ -37,7 +37,9 @@ services:
     environment:
       - NODE_ENV=production
       - PORT_API=3001
-      - DATABASE_URL=mysql://${MYSQL_USER:-simshield_user}:${MYSQL_PASSWORD:-simshield_password}@mysql:3306/${MYSQL_DATABASE:-simshield_db}
+      - DATABASE_URL=mysql://${MYSQL_USER}:${MYSQL_PASSWORD}@mysql:3306/${MYSQL_DATABASE:-simshield_db}
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
       - AI_SERVICE_URL=http://ai:8000
       - WEAVIATE_URL=http://weaviate:8080
     depends_on:

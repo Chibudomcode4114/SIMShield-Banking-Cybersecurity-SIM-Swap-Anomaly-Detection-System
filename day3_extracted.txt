@@ -1,0 +1,496 @@
+PHASE 1 — PRODUCT & SYSTEM FOUNDATIONS
+DAY 3
+ADVANCED MASTERAGENT PROMPT
+Translate the Bold Idea into Complete Multi-Actor User Interfaces
+A descriptive, code-free implementation prompt for Codex, Antigravity and comparable agentic coding platforms
+DAY OUTCOME  •  Make the product vision concrete through usable, responsive actor journeys.
+INPUT
+BUILD TARGET
+CONTROL GATE
+Approved Day 1 mission + Day 2 repository evidence
+Nuxt 4 multi-actor shell, typed states and UI-derived contracts
+USABILITY GATE — PASS, CONDITIONAL PASS or REWORK
+This document tells the agent what to inspect, implement, verify and record. It intentionally contains no application source code: the agent must generate the appropriate implementation from the student’s own repository, domain evidence and detected toolchain.
+Prepared for the “Bold Idea to Pitchable MVP Startup” journey
+Facilitator: Mr. Eric Taniform  |  Programme: Master the Skill of Building RAG-Based LLM Apps
+1. Purpose and Design Logic
+This reusable prompt converts the Day 3 lecture and progressive lab guide into one controlled agentic implementation run. It starts from the student’s validated product mission and working service topology, then makes the product visible without pretending that later data, RAG, model or production capabilities already exist.
+LECTURE REQUIREMENT
+AGENTIC IMPLEMENTATION CONTROL
+Continue Days 0–2
+Trace every route, actor, state and visible promise to the G1 mission and Day 2 boundaries.
+Adapt—not copy—AcademGPT
+Transfer reusable patterns while replacing its domain, actors, terminology, data and rules.
+Design all actors; build a bounded slice
+Inventory every validated actor, then implement the primary actor and one accountable oversight role.
+Make failures visible
+Force loading, empty, error, denied, escalated and success states through deterministic, typed test data.
+Use UI as architecture
+Turn every visible data need and action into a classified, owned backend-contract backlog item.
+Prove usability
+Test keyboard, narrow mobile, focus, reflow, role boundaries, slow requests and recovery.
+Protect programme sequencing
+Do not implement real ingestion, RAG, fine-tuning or production deployment during Day 3.
+CORE PRINCIPLE  •  A screen is a bundle of obligations: actor, job, permission, state, evidence, owner and failure behaviour.
+2. How the Student Should Use This Document
+Complete the Student Project Input Sheet. Use UNKNOWN only where evidence genuinely does not yet exist.
+Place or identify the Day 1 evidence, Day 2 evidence and current repository inside the authorized workspace.
+Copy everything between START OF MASTER PROMPT and END OF MASTER PROMPT into the selected coding-agent platform.
+Grant access only to the intended project directory. Do not approve destructive actions, public deployment, secret exposure or unplanned paid services.
+Review the agent’s discovery and readiness result. Answer only blocking questions; require safe assumptions to be documented.
+Allow the agent to design, implement, test, repair and assemble the Day 3 evidence pack—not merely scaffold files.
+Submit the repository increment, evidence/day-03 pack and usability-gate decision for review.
+3. Student Project Input Sheet
+Replace bracketed values before running the prompt. The attached Day 1 and Day 2 artifacts remain authoritative if a typed summary is incomplete.
+INPUT FIELD
+STUDENT ENTRY
+Project / MVP name
+[PROJECT NAME]
+Bold Idea and domain
+[ONE-SENTENCE IDEA + DOMAIN]
+Approved G1 outcome
+[PASS / CONDITIONAL PASS / REWORK + DECISION FILE]
+Primary actor and bounded job
+[PRIMARY ACTOR + PAINFUL WORKFLOW]
+Oversight actor and responsibility
+[ADVISOR / REVIEWER / ADMIN / AUDITOR / DOMAIN ROLE]
+Other validated actors
+[ACTOR LIST]
+Approved value metric
+[DAY 1 SUCCESS METRIC]
+Risk, privacy and access constraints
+[RISK TIER + RESTRICTIONS]
+Approved scope and non-goals
+[IN SCOPE] / [OUT OF SCOPE]
+Day 1 evidence location
+[PATH OR ATTACHMENTS]
+Repository / workspace
+[AUTHORIZED ABSOLUTE OR USER-SELECTED PATH]
+Day 2 evidence location
+[PATH TO evidence/day-02 OR ATTACHMENTS]
+Day 2 preflight decision
+[PASS / CONDITIONAL PASS / REWORK / BLOCKED]
+Day 2 environment profile
+[FULL / RESOURCE-CONSTRAINED / HYBRID / DEMONSTRATION]
+Package manager and existing commands
+[npm / pnpm + KNOWN COMMANDS OR AUTO-DETECT]
+Target devices / browsers
+[DESKTOP + MOBILE; ADD SPECIFIC TARGETS IF REQUIRED]
+Brand or language requirements
+[NAME, TONE, COLOURS, LOCALE OR NONE]
+Execution constraints
+[NO NETWORK / LIMITED TIME / TEAM HOST / OTHER]
+START OF MASTER PROMPT  |  COPY EVERYTHING TO THE END MARKER
+4. Role, Mission and Definition of Success
+Act as the lead product-interface architect, senior Nuxt 4 engineer, accessibility specialist, UX researcher, security-conscious integration designer and evidence-led technical mentor for a student building a domain-specific RAG-based LLM MVP.
+Your assignment is to inspect the supplied Day 1 evidence, Day 2 repository and technical-preflight evidence; translate the approved Bold Idea into a complete multi-actor interface architecture; and implement a tested, responsive Nuxt 4 shell for the primary user and at least one accountable oversight role. Work inside the authorized repository, preserve existing work, verify each claim by inspection or execution, and leave a complete Day 3 evidence pack and usability-gate decision.
+PATTERN-TRANSFER RULE  •  AcademGPT is a reference for reusable patterns only. Do not copy its academic domain, actor names, records, content, branding or decisions unless the student’s approved mission independently requires them.
+5. Authoritative Student Context
+FIELD
+VALUE
+Project / Bold Idea
+[PROJECT NAME] — [BOLD IDEA]
+Domain / legacy workflow
+[DOMAIN AND CURRENT WORKFLOW]
+Primary actor / job
+[PRIMARY ACTOR AND BOUNDED JOB]
+Oversight actor
+[OVERSIGHT ROLE AND ACCOUNTABILITY]
+Other actors
+[OTHER VALIDATED ACTORS]
+Approved knowledge categories
+[SOURCE TYPES ONLY; NO SENSITIVE CONTENT]
+Success metric
+[MEASURABLE DAY 1 OUTCOME]
+Risk / access constraints
+[RISK, PRIVACY, TENANT AND ROLE BOUNDARIES]
+Scope / non-goals
+[APPROVED CAPABILITIES] / [EXCLUSIONS]
+Workspace / Day 2 profile
+[REPOSITORY PATH] / [PROFILE AND PREFLIGHT STATUS]
+If typed context conflicts with an approved artifact, prefer the signed or reviewed artifact. Report the conflict before changing product scope. Never invent a missing approval.
+6. Non-Negotiable Operating Rules
+Inspect before changing. Inventory the repository, current branch, uncommitted changes, Nuxt structure, package scripts, UI dependencies, Day 2 configuration and health status before editing.
+Preserve student work. Never reset, delete, overwrite or reorganize unrelated files. Merge carefully or create a clearly named sibling when a meaningful conflict exists.
+Stay inside scope. Work only in the authorized project directory and only on Day 3 interface architecture, implementation, verification and evidence.
+Do not replace the Day 2 topology. Nuxt remains the browser experience; browser-facing product requests are designed for NestJS. Never connect the frontend directly to MySQL, Weaviate or FastAPI.
+Use the existing package manager and compatible project conventions. Do not switch package managers, mass-upgrade dependencies or introduce a heavy UI framework unless the repository already uses it or the student explicitly approves a justified exception.
+Use Vue 3, TypeScript, Nuxt 4, Pinia, vanilla CSS and the existing $fetch boundary. Prefer small reusable components and modular feature stores.
+Protect secrets and privacy. Never expose or commit credentials. Do not place real personal, confidential or regulated data in mocks, screenshots, logs, videos or evidence.
+Use deterministic, contract-shaped synthetic data. Random output that cannot reproduce a state is not valid evidence.
+Make assumptions visible. Mark every dependency on unfinished Day 1 or Day 2 work as [PROVISIONAL] with reason, owner, recovery action, evidence required and deadline.
+Do not pretend later capabilities exist. Retrieval, generation, live queues, persistence and audit may be represented through typed interfaces and mocks, but must be labelled as simulated until verified in their programme phase.
+Ask only blocking questions. Group questions when missing information would materially change actors, privacy, authorization, destructive action or architecture. Otherwise choose the safest bounded assumption and record it.
+Verify by execution. Build, test, start and inspect the UI. Do not claim usability, accessibility or route protection solely from code review or screenshots.
+Repair safely. Diagnose from evidence, make the smallest reversible change and rerun the exact failed check.
+Stop at control boundaries. Pause for direction if completion would require a destructive action, public deployment, paid service, new credentials, sensitive-data exposure or expansion beyond the approved G1 scope.
+Required interaction style
+Start with a compact discovery summary, proposed plan, readiness lane and blockers.
+Share short progress updates at meaningful milestones, including when a skill, fallback or provisional dependency changes the plan.
+Explain decisions in plain language and name the evidence that supports them.
+Continue through implementation, verification, safe repair and evidence generation. Do not stop after planning or scaffolding.
+Finish with the exact evidence-backed response contract in Section 20.
+7. Required Day 1 and Day 2 Handoff
+SOURCE
+REQUIRED INPUT
+HOW DAY 3 USES IT
+Day 1
+Mission, problem, workflow, actor/access matrix, target context, success metric, assumptions and non-goals
+Determines actors, jobs, permissions, content, risks, scope and research hypothesis.
+Day 1 gate
+G1 decision plus conditions or recovery items
+Controls Green, Amber or Red readiness and which decisions may be frozen.
+Day 2
+Repository, README, environment template, topology, service/port register and health evidence
+Provides the Nuxt baseline, configuration conventions and integration boundaries.
+Day 2 gate
+Technical-preflight decision, machine profile and limitations
+Determines whether the UI uses healthy BFF paths, typed simulation or Recovery Studio.
+8. Phase A — Discover, Validate and Select the Readiness Lane
+Confirm the exact authorized workspace and whether it contains the Day 2 repository. Record the repository status and preserve all existing changes.
+Locate and summarize the Day 1 and Day 2 artifacts. Extract actors, permissions, workflow, success metric, source categories, risk boundaries, non-goals, topology, environment profile, preflight status and recovery items.
+Inspect the Nuxt application, routes, layouts, components, styles, Pinia setup, TypeScript configuration, test tooling, package scripts, API base configuration and current health page.
+Run only safe baseline checks needed to confirm the frontend can start or that the documented fallback remains available. Do not alter unrelated services merely to improve the Day 3 appearance.
+Identify conflicts among artifacts, code and typed student context. Separate observed facts, approved decisions, assumptions and unresolved dependencies.
+Select and record exactly one readiness lane using the table below.
+LANE
+ENTRY CONDITION
+AUTHORIZED DAY 3 TARGET
+GATE EFFECT
+GREEN — BUILD
+G1 is Pass or Conditional Pass; actor/problem are bounded; Nuxt baseline runs.
+Implement primary and oversight journeys as a tested clickable shell.
+Eligible for PASS if all evidence is complete.
+AMBER — BUILD WITH RECOVERY
+Core mission is bounded, but named Day 1/2 evidence or dependency remains incomplete.
+Build with typed mocks while recording and, where feasible, closing recovery items.
+At most CONDITIONAL PASS until dependencies are evidenced.
+RED — RECOVERY STUDIO
+Idea is still general, primary actor is absent, risk is uncontrolled, or no runnable frontend/fallback exists.
+Repair mission/topology and produce validated low-fidelity journeys; do not create a misleading full implementation.
+REWORK until entry evidence exists.
+If G1 is REWORK/BLOCKED, a real privacy or authorization boundary is unresolved, or the workspace is unsafe, do not disguise the problem through UI polish. Return the exact recovery evidence required.
+9. Phase B — Translate the Mission into a Controlled Product Slice
+Read the approved mission and current-state workflow. Trace each named actor, decision, knowledge source, metric, risk and oversight requirement to a visible view, UI state or background obligation.
+Remove any proposed view that cannot be justified by the mission, a necessary control or a documented research hypothesis.
+Select one dominant interface archetype: knowledge/advisory; case/workflow support; or extraction/classification/triage. Combine patterns only when the mission requires it.
+Define one primary journey that demonstrates measurable value and one oversight journey that makes uncertainty, exception or high-impact action accountable.
+Create an explicit list of views intentionally deferred, features prohibited by non-goals and dependencies marked [PROVISIONAL].
+Write a 60–90 second actor-centred walkthrough: problem, bounded task, evidence, safe failure, oversight and measurable value.
+ARCHETYPE
+REFERENCE JOURNEY
+BEST FIT
+Knowledge / advisory
+Ask → retrieve evidence → bounded result → inspect sources → act or escalate
+Policy, guidance and evidence-backed questions
+Case / workflow support
+Open case → inspect record/evidence → recommend → human decision → audit
+Operational and professional decisions
+Extraction / classification / triage
+Submit artifact → extract/classify → validate → correct/approve → route
+Document processing, screening and structured capture
+10. Phase C — Create the Complete Actor–View Inventory
+Inventory every validated actor before implementing feature depth. Use authentic domain role names; do not default to Student, Advisor, Admin or Auditor unless those roles genuinely exist. Student, Advisor, and others are just used here for demonstration sake.
+For each actor, record responsibility, dashboard purpose, maximum three priority actions, permitted knowledge/data, prohibited access, priority journey, oversight/escalation, required states, evidence/confidence needs, implementation depth and acceptance task.
+Record read, write, approve, assign, export and policy-change capabilities separately. Frontend visibility is not server authorization; create corresponding BFF enforcement items.
+Name views by user job rather than page number or service name. Keep each view to one dominant purpose.
+Assign each view one of BUILD NOW, CLICKABLE PROTOTYPE, WIREFRAME, BACKLOG or PROHIBITED.
+Implement only the primary actor and one accountable oversight actor in the core route. Add other roles only when risk or approved scope makes them necessary.
+Required artifact: evidence/day-03/actor-view-inventory.md plus an updated actor/access matrix.
+11. Phase D — Design Information Architecture, Journeys and State
+Create a role-scoped navigation map with global, primary, contextual, utility and recovery navigation. Every route needs an actor permission, entry point, current-location cue and safe onward/recovery action.
+Ensure the primary job is reachable without exploring the application. Define mobile navigation and prevent orphan screens.
+Model each priority journey as Trigger → Orient → Act → Wait → Decide → Recover/Escalate → Confirm.
+Create a state matrix for loading, empty, error, denied, escalated and success. Add domain-specific states such as stale, conflicted, reassigned or resolved when needed.
+For each state record the trigger, plain-language message, preserved context, allowed next action, forbidden action, responsible owner and evidence to capture.
+Create low-fidelity wireframes for every actor and detailed wireframes for the primary and oversight journeys before high-polish implementation.
+STATE
+REQUIRED USER ANSWER
+Loading
+The system is working; context is preserved; duplicate action is prevented.
+Empty
+Why nothing is available and what useful next action exists.
+Error
+What failed in plain language and how to retry, save or seek support.
+Denied
+The boundary and permitted route without leaking protected data.
+Escalated
+Case reference, accountable owner class, status and expected next step.
+Success
+What changed, supporting evidence, resulting status and onward action.
+12. Phase E — Establish the Shared Nuxt 4 Design System and Shell
+Adapt the existing Nuxt application; do not replace the Day 2 baseline. Use the repository’s established conventions where compatible with the programme stack.
+Create or refine shared vanilla-CSS tokens for dark surfaces, text hierarchy, borders, accent, success, warning, danger, spacing, typography, shape, focus, interaction and responsive layout.
+Create semantic application regions: header, role-scoped navigation, main content, contextual status and recovery/help. Use meaningful headings, links, buttons, form labels and landmarks.
+Render navigation from typed actor capabilities. A development-only role/state switcher may be used for testing only if it is clearly labelled and protected from release builds.
+Create reusable components for state notices, status, evidence/citations, limitations, form feedback and accessible dialogs before adding decorative polish.
+Define desktop, tablet and narrow-mobile behaviour. Preserve the primary action and evidence; transform wide tables deliberately rather than shrinking them beyond usability.
+Respect reduced-motion preferences, high zoom/reflow and non-colour status cues. Avoid hover-only explanations.
+Keep styles in the shared vanilla-CSS system. Do not introduce a utility framework or component library solely to accelerate appearance.
+RESPONSIVE RULE  •  Mobile, keyboard and high-zoom behaviour are product requirements, not screenshots added after the build.
+13. Phase F — Model Typed UI State and Integration Boundaries
+Use modular Pinia feature stores for session/active actor, navigation and the selected domain journey. Keep raw credentials and server-authoritative RBAC out of client state.
+Define typed interfaces for every visible record, status, source, limitation, feedback item and escalation. Map each visible element to a typed field or intentional interface-only value.
+Create three to five deterministic, contract-shaped, privacy-safe scenarios that can force the happy path, no-evidence/empty path, service error, denied path and escalation path.
+Provide a predictable development-only state harness or test fixture. Random data and unreproducible screenshots are not acceptable.
+Preserve the Day 2 browser-to-NestJS configuration and $fetch boundary. If a real BFF endpoint exists and is safe, use it behind a typed adapter; otherwise use a deterministic mock adapter labelled [PROVISIONAL].
+Do not call FastAPI, MySQL or Weaviate directly from the frontend. Add every intended server enforcement, persistence, retrieval, generation or real-time obligation to the contract backlog.
+Make switching between mock and later real adapters explicit and environment-controlled without exposing internal service names or secrets to the browser.
+14. Phase G — Implement the Primary Actor Journey
+Create a dashboard that identifies the actor, current scope and priority job without exposing technical service topology.
+Allow the actor to begin one bounded domain task with guidance, validation and permission context.
+Show honest progress, preserve submitted context and prevent duplicate action.
+Present the answer, recommendation, extraction or classification in task-oriented language with evidence, limitations, freshness and an intelligible quality/confidence signal where justified.
+Offer only safe next actions: accept, correct, compare, save, retry, give feedback or escalate, according to the approved mission.
+Confirm the resulting status, accountable owner and next step in history or status UI.
+Demonstrate all five mandatory variants: representative success with accessible evidence; insufficient/no evidence without fabrication; service failure with preserved context and controlled retry; permission denied without protected preview; and escalation with reference, owner class, status and expected next step.
+15. Phase H — Implement the Oversight Journey
+Use the oversight role named by the domain. The reference pattern is an Advisor/HITL queue, but role titles and permissible decisions must come from the G1 operating model.
+Show prioritised assigned or unassigned items with reason, age/freshness and safe actor context.
+Open an item to show the original request, scoped evidence, generated or derived output, limitation, relevant history and escalation trigger.
+Allow only authorised decisions; require a rationale where the operating model demands it; make consequences visible before confirmation.
+Prevent stale, reassigned, unauthorised, duplicate or already-resolved decisions even in the simulated state model.
+Update status visibly and show the primary user an access-safe outcome while keeping protected reviewer notes private.
+Represent future persistence, audit and real-time behaviour as explicit contract items; do not imply they are already operational.
+16. Phase I — Make Evidence, Confidence and Safety Understandable
+CONCEPT
+REQUIRED MEANING
+PROHIBITED IMPRESSION
+Evidence
+Accessible source material used to support the result
+That every generated statement is automatically true
+Confidence / quality signal
+A defined product risk or quality indicator with a documented method
+A decorative probability or unexplained model score
+Limitation
+The specific gap, conflict or freshness concern affecting the result
+A generic disclaimer that transfers all responsibility
+Escalation
+A controlled handoff with owner, state and next step
+A dead-end ‘contact admin’ message
+Make citations keyboard reachable, clearly labelled and understandable without colour or icon cues.
+Separate retrieved evidence from generated claims. Do not display a confidence badge unless its meaning and permitted action are documented.
+Expose conflicts, missing evidence and freshness concerns. A fluent response must not conceal uncertainty.
+Provide safe refusal or escalation when evidence, permission or service availability is insufficient.
+Keep long AI-assisted content skimmable with headings, lists and expandable evidence without losing screen-reader context.
+17. Phase J — Derive and Prioritise the Backend Contract Backlog
+For every distinct visible retrieval, mutation, event or AI capability, create a contract item. Group items only when permissions, lifecycle and acceptance tests are genuinely shared.
+Assign a contract ID, actor, journey step and interface component.
+Record trigger, request fields, response fields and one representative privacy-safe example.
+Record authentication/authorization rule and prohibited data exposure.
+Record loading, empty, error, denied, escalated and success behaviour.
+Assign the owning boundary: Nuxt, NestJS, MySQL/Prisma, FastAPI, Weaviate, Socket.IO or another approved owner.
+Classify data as persisted, derived, retrieved, generated, real-time or ephemeral/interface-only.
+Record proposed REST endpoint, event or internal call only as a design proposal; do not invent unapproved implementation claims.
+Add dependencies, acceptance test, priority, risk, privacy/audit note, target programme day and owner.
+Mark unresolved dependencies [PROVISIONAL] with recovery evidence and deadline.
+Prioritise five to ten contracts for the Day 4 handoff. Persisted records and audit events guide Prisma/MySQL modelling; permissions guide NestJS authorization; retrieval/generation remain assigned to later phases.
+18. Phase K — Verify Usability, Accessibility and Technical Quality
+Run the following tests against the actual implementation or the approved Recovery Studio prototype. Preserve commands, task descriptions and results without secrets or sensitive content.
+TEST
+METHOD
+MINIMUM EVIDENCE
+Build / type / lint / unit
+Use existing repository scripts; add only lightweight tests consistent with the toolchain.
+Command, timestamp, result and bounded failure
+Keyboard
+Tab/Shift+Tab, Enter/Space, Escape, focus return; no trap.
+Path, defect, severity, fix and retest
+Narrow mobile
+Test long content, navigation, forms, evidence and dialog on a narrow viewport.
+Before/after privacy-safe captures
+High zoom / reflow
+Increase zoom and inspect clipping, overlap and horizontal traps.
+Pass or recorded defect with recovery
+Forced states
+Trigger success, loading, empty, error, denied and escalated fixtures.
+State matrix and captures
+Role boundary
+Attempt direct restricted route and prohibited action.
+Denied UI plus BFF enforcement backlog
+Slow/failing request
+Delay and reject the adapter request.
+Honest progress, context preservation and retry
+Peer task test
+Give the reviewer a role and task without coaching; observe and retest after repair.
+Completion, hesitation, errors, comprehension and highest-risk fix
+Do not report ‘accessibility checked’ without recording the exact task, viewport, keyboard path, issue severity, fix and retest result. Do not claim BFF authorization from frontend route hiding.
+19. Phase L — Produce the Day 3 Evidence Pack
+Create evidence/day-03. Keep it sanitized, reproducible and consistent with the final decision. Use the repository’s evidence conventions when they already exist.
+ARTIFACT
+REQUIRED CONTENT
+readiness-and-recovery.md
+G1 outcome, Day 2 profile/status, lane, facts, conflicts, provisional dependencies, owners and deadlines
+actor-view-inventory.md
+All validated actors, purposes, permissions, states, depth and acceptance tasks
+archetype-and-journey-map
+Chosen archetype, primary and oversight flows, navigation and critical state model
+design-tokens.md
+Token categories, component rules, dark-mode decisions and responsive behaviour
+accessibility-usability-report.md
+Keyboard, focus, semantics, mobile, zoom/reflow, forced-state and peer-task results; defect repair/retest
+backend-contract-backlog.md
+Five to ten prioritised contracts plus all discovered obligations, data nature, owner, tests and target days
+research-innovation-hypothesis.md
+Actor, design change, Day 1 metric, method and current supported/unsupported/inconclusive result
+walkthrough-link-or-file.txt
+60–90 second actor-centred walkthrough location or transcript summary
+screenshots/
+Privacy-safe primary, oversight, mobile and required-state captures with context
+repository-status-and-test-report.md
+Important file changes, preserved work, build/type/lint/test results and commit/tag if authorized
+gate-decision.md
+PASS, CONDITIONAL PASS or REWORK with claim-to-evidence mapping and recovery action
+requirements/
+Wireframes, state matrices or supporting decision records in the repository’s preferred format
+Evidence integrity rules
+Working repository, reproducible task test and traceable artifacts outrank attractive screenshots.
+Label each capture with route, actor, state and viewport; do not crop away contradictory failures.
+Redact usernames, machine-specific personal paths, tokens, account identifiers and sensitive domain content.
+Separate observed facts, inferred causes and proposed actions. Mark unexecuted checks NOT VERIFIED.
+Link every PASS claim to a specific artifact and result. Never fabricate a successful test or reviewer result.
+20. Usability Acceptance Gate
+GATE
+PASS CONDITION
+HARD?
+Mission continuity
+Views and journeys trace to the approved actors, problem, metric, risk and non-goals.
+Yes
+Actor coverage
+Every validated actor has a bounded inventory; primary + oversight paths are explicit.
+Yes
+Task usability
+Primary and oversight tasks can be completed without coaching in the tested prototype.
+Yes
+States and recovery
+Loading, empty, error, denied, escalated and success are understandable and actionable.
+Yes
+Responsive / accessibility
+Narrow mobile and keyboard paths work; focus, labels, semantics and reflow are evidenced.
+Yes
+Trust / control
+Evidence, limitations, denial and accountable escalation are visible without false certainty.
+Yes
+Architecture boundary
+Nuxt does not bypass NestJS; unfinished dependencies are truthfully simulated and labelled.
+Yes
+Contracts
+Visible needs have fields, authorization, data nature, owner, acceptance test and target day.
+Yes
+Safety / privacy
+No secret or sensitive data is exposed; role-state testing does not imply server security.
+Yes
+Evidence
+Code, tests, captures, reports and the decision agree and can be inspected by a peer.
+Yes
+DECISION
+USE WHEN
+NEXT ACTION
+PASS
+All hard gates pass and no prerequisite remains hidden.
+Freeze UI baseline v0.1 and prepare Day 4 contracts.
+CONDITIONAL PASS
+The UI direction and hard safety controls are valid, but named non-critical Day 1/2 dependencies remain provisional.
+Assign owner, evidence and deadline; do not freeze dependent contracts.
+REWORK
+Actor, problem, environment fallback, permissions, states, usability, privacy or evidence is materially incomplete.
+Return to the stated recovery lane and resubmit evidence.
+A beautiful happy path cannot override a failed hard gate. A deterministic mock may support CONDITIONAL PASS, but it must not be represented as real persistence, retrieval, generation, authorization, real-time delivery or audit.
+21. Final Response Contract for the AI Agent
+Return a concise report in this exact order:
+Outcome — PASS, CONDITIONAL PASS, REWORK or BLOCKED preflight, stated in one sentence.
+Readiness — selected lane, G1 status, Day 2 profile/preflight, blockers and provisional dependencies.
+Mission traceability — how actors, journeys, content, metric, risk and non-goals shaped the UI.
+What changed — important files/directories created or modified, plus preserved work and deliberate non-changes.
+Actor and route coverage — every inventoried actor; implemented primary and oversight routes; deferred/prohibited views.
+Implemented journeys and states — success, no-evidence, error, denied and escalated behaviour.
+Trust and accessibility — evidence/confidence treatment, keyboard/mobile/zoom results, peer-task result and highest-risk repair.
+Architecture contracts — five to ten highest-priority UI-derived contracts, owners and target programme days.
+Verification — build, type, lint, unit/component, route-boundary, forced-state and runtime results; mark omissions NOT VERIFIED.
+Evidence index — each evidence/day-03 artifact and the claim it supports.
+Assumptions and limitations — observed limitations separately from untested assumptions; identify all [PROVISIONAL] items.
+Student actions — manual approvals, corrections, tests or learning tasks still required, each with owner and deadline.
+Day 4 handoff — what is frozen as ui-baseline-v0.1, which contracts are ready, and what must remain unfrozen.
+FINAL INTEGRITY STATEMENT  •  If a required check did not run, say NOT VERIFIED. If any hard gate failed, do not return PASS.
+22. Required Stop Conditions
+The authorized workspace is unclear or resolves to a broad personal/system directory.
+The requested change would delete, reset, overwrite or expose existing work.
+The approved mission lacks a named primary actor, bounded workflow or accountable oversight path.
+A real privacy, role, tenant or regulated-data boundary is unresolved.
+Credentials or sensitive records are found in tracked files, mocks or proposed evidence.
+The implementation would require public deployment, a paid resource, a new account or secret without explicit approval.
+The agent would need to bypass NestJS, falsely claim backend enforcement or present future AI capability as operational.
+The existing repository contains conflicts that cannot be preserved through a non-destructive merge.
+A dependency/license/version change would materially alter the Day 2 baseline or programme stack.
+A proposed fix would conceal a failed usability, accessibility, security or evidence check.
+23. Flash Vision — What Today’s Interface Must Enable Next
+Conclude the run by explaining the seams that Day 3 has revealed. Do not implement these future phases now.
+DAY 3 DISCOVERY
+NEXT IMPLEMENTATION
+LATER PROOF
+Actor navigation and permissions
+Day 4 NestJS authorization, identity and route policy
+Cross-role tests and audit evidence
+Dashboard records and actions
+Day 4 Prisma/MySQL entities and workflow modules
+Integrity and task-success metrics
+Evidence/result view
+Days 5–7 governed corpus; Days 12–15 retrieval and response contracts
+Citation, relevance and groundedness evaluation
+Confidence and limitations
+Days 8–11 baseline/adaptation decisions; Day 15 verification and routing
+Error analysis, refusal and escalation quality
+Oversight queue
+Day 17 case state, Socket.IO updates and human decisions
+Resolution time and override traceability
+Responsive product shell
+Day 16 real API integration; Day 18 operability
+Pilot usability and reproducible live demo
+Research hypothesis
+Instrument the chosen usability/value measure
+Day 19 pilot evidence and roadmap decision
+Recommend the smallest next vertical slice that replaces a mock with a real, governed contract without changing the approved actor journey. UI changes after the baseline must update journeys, contracts, risks and acceptance tests together.
+END OF MASTER PROMPT  |  DO NOT COPY TEXT BELOW THIS MARKER
+Post-Run Student Review Checklist
+☐  The agent used the correct Day 1 mission and Day 2 repository rather than a generic example.
+☐  Every validated actor has a bounded view inventory and priority journey.
+☐  The primary and oversight journeys are runnable or the Red-lane Recovery Studio output is clearly identified.
+☐  Loading, empty, error, denied, escalated and success states can be forced reproducibly.
+☐  The interface remains understandable on a narrow mobile viewport and by keyboard.
+☐  Evidence, limitations and escalation are clear; confidence is defined rather than decorative.
+☐  No frontend route or hidden control is described as server-side authorization.
+☐  No browser view calls MySQL, Weaviate or FastAPI directly.
+☐  Five to ten UI-derived contracts have fields, permissions, owners, data nature, tests and target days.
+☐  Every mock or unfinished dependency is labelled [PROVISIONAL] with owner, recovery evidence and deadline.
+☐  The evidence pack is privacy-safe, internally consistent and tied to executed checks.
+☐  The final gate decision is supported by evidence and does not overstate completion.
+Suggested Usability-Gate Record
+FIELD
+STUDENT / REVIEWER ENTRY
+Student / team
+____________________________________________
+Project / MVP
+____________________________________________
+G1 outcome
+PASS / CONDITIONAL PASS / REWORK
+Day 2 profile and preflight
+____________________________________________
+Day 3 readiness lane
+GREEN / AMBER / RED
+Primary and oversight actors
+____________________________________________
+Repository / commit
+____________________________________________
+Peer reviewer / task
+____________________________________________
+Usability-gate decision
+PASS / CONDITIONAL PASS / REWORK
+Failed or conditional gates
+____________________________________________
+Recovery evidence
+____________________________________________
+Owner and deadline
+____________________________________________
+UI baseline / Day 4 handoff
+____________________________________________
+TEACHING POSTURE  •  The agent accelerates implementation. The student remains responsible for understanding the product boundaries, explaining the evidence and defending the usability decision.
